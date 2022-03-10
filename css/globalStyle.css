@@ -1,0 +1,126 @@
+* {
+  padding: 0px;
+  margin: 0px; }
+
+body {
+  background-color: #F8F6EB; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600; }
+
+h1 {
+  font-size: 40px;
+  color: #E16847; }
+
+h2 {
+  font-size: 32px;
+  color: white; }
+
+p {
+  font-family: "Karla", sans-serif;
+  color: #605E50; }
+
+a {
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  color: #605E50;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500; }
+  a:hover {
+    color: #E16847;
+    text-decoration: underline; }
+
+.button {
+  background-color: #E16847;
+  color: white;
+  padding: 13px 33px;
+  border-radius: 99px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  display: block; }
+
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 20px; }
+  header img {
+    width: 40px;
+    height: auto;
+    padding: 0px 16px; }
+  header ul {
+    margin-left: 40px; }
+    header ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 8px 16px; }
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.heroContainer {
+  width: 80%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  padding: 40px 0px;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-duration: 1.8s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.heroText {
+  width: 60%; }
+  .heroText h1 {
+    max-width: 600px;
+    margin-bottom: 16px; }
+  .heroText p {
+    max-width: 500px;
+    margin-bottom: 40px; }
+
+.heroImg {
+  width: 40%; }
+  .heroImg img {
+    width: 100%;
+    height: auto; }
+
+.benefits {
+  width: 100%;
+  background-color: #E16847;
+  padding: 80px 0px; }
+
+.benefitsTitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px; }
+
+.benefitsCointainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly; }
+
+.benefitsCard {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 8px;
+  display: inline-block; }
+  .benefitsCard img {
+    width: 100%;
+    height: auto; }
