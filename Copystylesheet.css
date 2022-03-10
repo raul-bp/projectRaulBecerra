@@ -1,167 +1,55 @@
-$ralewayFont: 'Raleway', sans-serif;
-$karlaFont: 'Karla', sans-serif;
-$oysterColor: #F8F6EB;
-$orangeColor: #E16847;
-$grayColor:#605E50;
-
-
 * {
     padding: 0px;
     margin: 0px;
-}
-
-body {
-    background-color: $oysterColor;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: $ralewayFont;
-    font-weight: 600;
-}
-
-h1 {
-    font-size: 40px;
-    color: $orangeColor;
-}
-
-h2 {
-    font-size: 32px;
-    color: white;
-}
-
-p {
-    font-family: $karlaFont;
-    color: $grayColor;
-}
-
-a {
-    font-family: $karlaFont;
-    text-decoration: none;
-    color: $grayColor;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-    &:hover {
-        color:$orangeColor;
-        text-decoration: underline;
-    }
-}
-
-.button {
-    background-color: $orangeColor;
-    color:white;
-    padding: 13px 33px;
-    border-radius: 99px;
-    border: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    display: block;
-}
-
-header {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0px 20px;
-    img {
-        width: 40px;
-        height: auto;
-        padding: 0px 16px;
-    }
-    ul {
-        margin-left: 40px;
-        li {
-            list-style: none;
-            display: inline-block;
-            margin: 8px 16px;
-        }
-    }
-}
-
-.hero {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.heroContainer {
-    width: 80%;
-    max-width: 1100px;
-    display: flex;
-    align-items: center;
-    padding: 40px 0px;
-    animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-duration: 1.8s;
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0;
-        transform: translateY(-150px);}
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-.heroText {
-    width: 60%;
-    h1 {
-        max-width: 600px;
-        margin-bottom: 16px;
-    }
-    p {
-        max-width: 500px;
-        margin-bottom: 40px;
-    }
-}
-
-.heroImg {
-    width: 40%;
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.benefits {
-    width: 100%;
-    background-color: $orangeColor;
-    padding: 80px 0px;
-}
-
-.benefitsTitle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.benefitsCointainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.benefitsCard {
-    width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 8px;
-    display: inline-block;
-    img {
-        width: 100%;
-        height: auto;
-    }
+    font-family: 'Lato', sans-serif;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 80px 120vh 200px;
+}
+
+header {
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 50%;
+    width: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0px 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    letter-spacing: 0.01em;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+button {
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 99px;
+    border: none;
+    text-transform: capitalize;
 }
 
 .gridContent {
@@ -201,10 +89,11 @@ header {
 
 .contentTitle {
     grid-area: a2;
-    h2 {
-        color: white;
-        font-size: 50px;
-    }
+}
+
+.contentTitle h2 {
+    color: white;
+    font-size: 50px;
 }
 
 .highlightTitle {
@@ -275,23 +164,22 @@ footer {
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "x1 x2 x3 x4 x4 x4";
     padding: 40px 10vw;
-    ul {
-        li {
-            display:inline-block;
-            width: 100%;
-            padding: 4px 0px;
-        }
-    }
 }
 
 .footerLogo {
     width: 50%;
-    img {
-        width: 100%;
-        height: auto;
-    }
 }
 
+.footerLogo img {
+    width: 100%;
+    height: auto;
+}
+
+footer ul li {
+    display:inline-block;
+    width: 100%;
+    padding: 4px 0px;
+}
 
 .placeX1 {
     grid-area: x1;
@@ -381,6 +269,7 @@ footer {
     padding: 10px 10px;
     margin: 0px 8px;
     border-radius: 18px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

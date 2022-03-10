@@ -124,3 +124,259 @@ header {
   .benefitsCard img {
     width: 100%;
     height: auto; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px 120vh 200px; }
+
+.gridContent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 200px 250px 250px;
+  background-color: blue;
+  grid-template-areas: "a1 a2 a2 a2 a3 a3" "a1 b1 b1 b2 b3 b3" "a1 c1 c1 b2 c2 c2";
+  padding: 120px 10vw; }
+
+.contentOverline {
+  display: flex;
+  grid-area: a1;
+  margin-top: 20px; }
+
+.overline {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white; }
+
+.divLine {
+  height: 1px;
+  width: 25px;
+  background-color: white;
+  display: inline-block;
+  margin-top: 4px;
+  margin-left: 4px; }
+
+.contentTitle {
+  grid-area: a2; }
+  .contentTitle h2 {
+    color: white;
+    font-size: 50px; }
+
+.highlightTitle {
+  color: bisque; }
+
+.spacerA3 {
+  grid-area: a3; }
+
+.spacerB2 {
+  grid-area: b2;
+  width: 10px; }
+
+.benefitCard {
+  display: flex; }
+
+.benefitCardImage {
+  width: 15%;
+  height: auto; }
+
+.benefitCardText {
+  width: 85%;
+  height: auto; }
+
+.benefitCard img {
+  width: 40px;
+  height: auto; }
+
+.benefitCard h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  margin-bottom: 16px;
+  color: white; }
+
+.benefitCard p {
+  color: white; }
+
+.placeB1 {
+  grid-area: b1; }
+
+.placeB3 {
+  grid-area: b3; }
+
+.placeC1 {
+  grid-area: c1; }
+
+.placeC2 {
+  grid-area: c2; }
+
+footer {
+  background-color: brown;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "x1 x2 x3 x4 x4 x4";
+  padding: 40px 10vw; }
+  footer ul li {
+    display: inline-block;
+    width: 100%;
+    padding: 4px 0px; }
+
+.footerLogo {
+  width: 50%; }
+  .footerLogo img {
+    width: 100%;
+    height: auto; }
+
+.placeX1 {
+  grid-area: x1; }
+
+.placeX2 {
+  grid-area: x2; }
+
+.placeX3 {
+  grid-area: x3; }
+
+.blackFont {
+  color: black; }
+
+.blackBG {
+  background-color: black; }
+
+.gridProducts {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px auto 200px; }
+
+.productsSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  background-color: cornsilk;
+  grid-template-areas: "q1 q1 q2 q2" "w1 w2 w3 w4";
+  padding: 120px 10vw;
+  row-gap: 40px; }
+
+.productMainImage {
+  grid-area: q1; }
+
+.productMainImage img {
+  width: 100%;
+  height: auto; }
+
+.productMainTitle {
+  grid-area: q2;
+  width: 400px;
+  padding-left: 80px; }
+
+.productMainTitle p {
+  display: inline-block; }
+
+.titleSection {
+  color: black;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 20px 0px 40px 0px; }
+
+.paragraphSection {
+  margin-bottom: 20px; }
+
+.placeOne {
+  grid-area: w1; }
+
+.placeTwo {
+  grid-area: w2; }
+
+.placeThree {
+  grid-area: w3; }
+
+.placeFour {
+  grid-area: w4; }
+
+.productCard {
+  background-color: white;
+  padding: 10px 10px;
+  margin: 0px 8px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 1s; }
+
+.productCard:hover {
+  transform: scale(1.05); }
+
+.productCard img {
+  width: 100%;
+  height: auto; }
+
+@media only screen and (max-width: 600px) {
+  header ul {
+    display: none; }
+  header button {
+    display: none; }
+  .grid {
+    grid-template-rows: 80px 90vh auto; }
+  .gridContent {
+    display: grid;
+    padding: 0px 16px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 200px 150px 150px;
+    background-color: green;
+    grid-template-areas: "a1 a1" "b1 b1" "c1 c2" "c3 c4"; }
+  .contentOverline {
+    grid-area: a1; }
+  .contentTitle {
+    grid-area: b1;
+    width: 100%; }
+  .contentTitle h2 {
+    font-size: 40px; }
+  .placeB1 {
+    grid-area: c1; }
+  .placeB3 {
+    grid-area: c2; }
+  .placeC1 {
+    grid-area: c3; }
+  .placeC2 {
+    grid-area: c4; }
+  .benefitCard {
+    display: block; }
+  .benefitCardImage {
+    width: 100%; }
+  .benefitCardText {
+    width: 100%; }
+  .benefitCardText h3 {
+    font-size: 20px; }
+  .benefitCardText p {
+    display: none; }
+  footer {
+    padding-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 200px;
+    grid-template-areas: "x1 x1" "x2 x3";
+    padding: 0px 16px; }
+  .footerLogo img {
+    width: 100px;
+    height: auto; }
+  .gridProducts {
+    grid-template-rows: 80px auto auto; }
+  .productsSection {
+    display: grid;
+    padding: 0px 16px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "q1 q1" "q2 q2" "w1 w2" "w3 w4"; }
+  .productMainImage {
+    width: 100%;
+    margin-top: 24px; }
+  .productMainTitle {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column; } }
