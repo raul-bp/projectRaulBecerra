@@ -1,0 +1,24 @@
+.button {
+    background-color: $orangeColor;
+    color:white;
+    padding: 13px 33px;
+    border-radius: 99px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: block;
+}
+
+.button--disabled {
+    @extend .button;
+    background-color: $orangeColorDisabled;
+    color: $grayColor;
+}
+
+@mixin displayStructure($display,$align,$justify){
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}

@@ -1,3 +1,19 @@
+.button, .button--disabled {
+  background-color: #E16847;
+  color: white;
+  padding: 13px 33px;
+  border-radius: 99px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  display: block; }
+
+.button--disabled {
+  background-color: #dba99b;
+  color: #605E50; }
+
 * {
   padding: 0px;
   margin: 0px; }
@@ -32,23 +48,11 @@ a {
     color: #E16847;
     text-decoration: underline; }
 
-.button {
-  background-color: #E16847;
-  color: white;
-  padding: 13px 33px;
-  border-radius: 99px;
-  border: none;
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  display: block; }
-
 header {
-  height: 80px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 80px;
   padding: 0px 20px; }
   header img {
     width: 40px;

@@ -1,9 +1,5 @@
-$ralewayFont: 'Raleway', sans-serif;
-$karlaFont: 'Karla', sans-serif;
-$oysterColor: #F8F6EB;
-$orangeColor: #E16847;
-$grayColor:#605E50;
-
+@import "variables";
+@import "elements";
 
 * {
     padding: 0px;
@@ -47,24 +43,9 @@ a {
     }
 }
 
-.button {
-    background-color: $orangeColor;
-    color:white;
-    padding: 13px 33px;
-    border-radius: 99px;
-    border: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    display: block;
-}
-
 header {
+    @include displayStructure(flex,center,flex-start);
     height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     padding: 0px 20px;
     img {
         width: 40px;
