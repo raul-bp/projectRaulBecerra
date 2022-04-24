@@ -1,24 +1,120 @@
+.inlineBlock {
+    display: inline-block
+}
+
 .button {
-    background-color: $orangeColor;
-    color:white;
+    @include buttonText;
     padding: 13px 33px;
-    border-radius: 99px;
+    border-radius: 100px;
     border: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    display: block;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-.button--disabled {
-    @extend .button;
-    background-color: $orangeColorDisabled;
-    color: $grayColor;
+
+@mixin button ($buttonVariation, $backgroundButtonColor, $buttonFontColor) {
+    .#{$buttonVariation} {
+        background-color: $backgroundButtonColor;
+        color: $buttonFontColor;
+    }
+  }
+  
+  @include button ("varA", $orange1, $marfil1);
+  @include button ("varB", $marfil1, $orange1);
+  @include button ("varC", $green1, $marfil1);
+  @include button ("varD", $marfil1, $green1);
+
+
+
+  .buttonSmall {
+    @include buttonText;
+    background-color: transparent;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border-color: $gray3;
+    border-width: 1px;
+    color: $gray3;
+    &:hover {
+        cursor: pointer;
+    }
+  }
+
+ul li {
+    @include overline;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    a{
+        color: $gray2 ;
+    }
 }
 
-@mixin displayStructure($display,$align,$justify){
-    display: $display;
-    align-items: $align;
-    justify-content: $justify;
+
+.divLine {
+    background-color: $white1;
+    height: 1px;
+    width: 24px;
+    display: inline-block;
+}
+
+.overlineAccent {
+    display: flex;
+    height: 56px;
+    flex-direction: row;
+    align-items: center;
+    div {
+        margin-left: 8px;
+    }
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid $gray1;
+    background-color: $marfil1;
+    box-shadow: none;
+    font-family: $openSansFont;
+    padding-left: 8px;
+    &:focus {
+        border: 2px solid $gray2;
+        color: $gray3;
+    }
+}
+
+select {
+    @extend input
+}
+
+.inputStructure {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+.formContent {
+    height: 100%;
+    background-color: $marfil1;
+    padding: 60px 120px;
+}
+
+.divLineFull {
+    background-color: $accent1;
+    height: 1px;
+    width: 100%;
+    display: inline-block;
+    margin: 80px 0px 24px 0px;
+}
+
+.allyCard {
+    width: 250px;
+    height: auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h4 {
+        margin: 16px 0px 4px 0px;
+    }
 }

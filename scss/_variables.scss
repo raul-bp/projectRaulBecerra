@@ -1,6 +1,25 @@
-$ralewayFont: 'Raleway', sans-serif;
-$karlaFont: 'Karla', sans-serif;
-$oysterColor: #F8F6EB;
-$orangeColor: #E16847;
-$orangeColorDisabled: #dba99b;
-$grayColor:#605E50;
+$orange1: #D26F50;
+$marfil1: #F8F6EB;
+$gray2: #807B67;
+$gray3: #323023;
+$gray1: #B9B49E;
+$white1: #FFFEF5;
+$accent1: #E0D9BF;
+$green1: #2B403A;
+$colors: $orange1, $marfil1, $gray1, $gray2, $gray3, $white1, $accent1, $green1;
+
+@mixin colorList ($colorName, $color) {
+    .#{$colorName} {
+        color: $color;
+    } 
+}
+
+@include colorList ("orange1", $orange1);
+@include colorList ("marfil1", $marfil1);
+@include colorList ("gray2", $gray2);
+@include colorList ("gray3", $gray3);
+@include colorList ("gray1", $gray1);
+@include colorList ("white1", $white1);
+@include colorList ("accent1", $accent1);
+@include colorList ("green1", $green1);
+

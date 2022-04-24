@@ -1,0 +1,97 @@
+$ralewayFont: 'Raleway', sans-serif;
+$openSansFont: 'Open Sans', sans-serif;
+$bold: 700;
+$semiBold: 600;
+$medium: 500;
+$regular: 400;
+
+.tittle {
+    font-family: $ralewayFont;
+    &H1 {
+        @extend .tittle;
+        font-weight: $semiBold;
+        font-size: 80px;
+        line-height: 94px;
+        letter-spacing: -0.02em;
+        @media screen and (max-width:600px){
+            font-size: 40px;
+            line-height: 60px;
+        }
+    }
+    &H2 {
+        @extend .tittle;
+        font-weight: $semiBold;
+        font-size: 60px;
+        line-height: 58px;
+        letter-spacing: -0.03em;
+    }
+    &H3 {
+        @extend .tittle;
+        font-weight: $medium;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    &H4 {
+        @extend .tittle;
+        font-weight: $semiBold;
+        font-size: 32px;
+        line-height: 150%;
+        font-family: $openSansFont;
+    }
+}
+
+.paragraph {
+    font-family: $openSansFont;
+    font-weight: $regular;
+    &Increased {
+        @extend .paragraph;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &Regular {
+        @extend .paragraph;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    &Small {
+        @extend .paragraph;
+        font-size: 14px;
+        line-height: 150%;
+    }
+    &SemiBold {
+        @extend .paragraph;
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: $semiBold;
+    }
+}
+
+@mixin overline {
+    font-family: $openSansFont;
+    font-weight: $semiBold;
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+.overline {
+    @include overline;
+    &Active {
+        @include overline;
+        font-weight: $bold;
+        text-decoration: underline;
+    }
+}
+
+@mixin buttonText {
+    font-family: $openSansFont;
+    font-weight: $semiBold;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.buttonText {
+    @include buttonText;
+}
